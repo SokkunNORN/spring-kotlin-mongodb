@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: mongo-db-client-server
+
+  data:
+    mongodb:
+      uri: mongodb://fiu-user:fiu-password@localhost:27017/fiu-db
+
+server:
+  port: 9099
+
