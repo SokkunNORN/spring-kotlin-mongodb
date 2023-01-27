@@ -11,7 +11,6 @@ import org.springframework.data.mongodb.core.convert.MappingMongoConverter
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories
 
 @Configuration
-@EnableReactiveMongoRepositories(basePackageClasses = [Post::class])
 class MongoDBConfig: AbstractReactiveMongoConfiguration() {
 
     @Bean

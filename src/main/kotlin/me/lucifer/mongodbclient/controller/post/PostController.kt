@@ -18,8 +18,10 @@ class PostController(
     fun findAll () = service.findAll()
 
     @PostMapping
-    fun save (): Mono<Post> {
-        log.info("Controller function is called")
-        return service.save()
+    fun save (@RequestBody request: Post): Mono<Post> {
+        return service.save(request)
     }
+
+    @DeleteMapping("/{id}")
+    fun deleteById(@PathVariable("id") id: String) = service.delete(id)
 }
