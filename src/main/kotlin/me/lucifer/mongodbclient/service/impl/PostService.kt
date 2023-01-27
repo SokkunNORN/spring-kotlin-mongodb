@@ -18,6 +18,9 @@ class PostService(
     private val log = LoggerFactory.getLogger(javaClass)
 
     override fun findAll(): Flux<Post> = template.findAll(Post::class.java)
+    override fun findById(id: String): Mono<Post> {
+        return template.findById(id, Post::class.java)
+    }
 
     override fun save(request: Post) = template.save(request)
 

@@ -7,6 +7,7 @@ import reactor.core.publisher.Mono
 
 interface IPostService {
     fun findAll (): Flux<Post>
+    fun findById(id: String): Mono<Post>
     fun save (request: Post): Mono<Post>
     fun delete(id: String): Mono<DeleteResult>
 }

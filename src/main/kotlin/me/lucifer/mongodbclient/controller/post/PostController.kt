@@ -17,11 +17,14 @@ class PostController(
     @GetMapping
     fun findAll () = service.findAll()
 
+    @GetMapping("/{id}")
+    fun findById (@PathVariable("id") id: String) = service.findById(id)
+
     @PostMapping
     fun save (@RequestBody request: Post): Mono<Post> {
         return service.save(request)
     }
 
     @DeleteMapping("/{id}")
-    fun deleteById(@PathVariable("id") id: String) = service.delete(id)
+    fun deleteById (@PathVariable("id") id: String) = service.delete(id)
 }
