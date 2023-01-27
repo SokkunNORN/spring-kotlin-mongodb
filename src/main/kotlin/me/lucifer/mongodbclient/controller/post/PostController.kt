@@ -18,7 +18,6 @@ class PostController(
     fun findAll () = service.findAll()
 
     @PostMapping
-    @ResponseStatus(value = HttpStatus.CREATED)
     fun save (): Mono<Post> {
         log.info("Controller function is called")
         return service.save()
