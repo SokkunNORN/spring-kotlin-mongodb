@@ -21,9 +21,7 @@ class PostController(
     fun findById (@PathVariable("id") id: String) = service.findById(id)
 
     @PostMapping
-    fun save (@RequestBody request: Post): Mono<Post> {
-        return service.save(request)
-    }
+    fun save (@RequestBody request: Post) = service.save(request)
 
     @DeleteMapping("/{id}")
     fun deleteById (@PathVariable("id") id: String) = service.delete(id)

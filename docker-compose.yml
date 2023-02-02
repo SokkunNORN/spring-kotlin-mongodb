@@ -3,7 +3,7 @@ services:
 
   mongodb:
     image: mongo:latest
-    container_name: mongodb-dev
+    container_name: mongodb-local
     volumes:
       - mongodb_data:/data/db
     ports:
